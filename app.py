@@ -41,7 +41,7 @@ def upload_file():
                 db.session.add(profile_entry)
                 db.session.commit()
                 image.save(os.path.join(app.config["IMAGE_UPLOADS"], filename))
-                flash('Employee Successfully saved!', "success")
+                flash('File upload Successfully !', "success")
             except IntegrityError as e:
                 flash('Something went wrong please try again later', "danger")
                 return redirect(request.url)
